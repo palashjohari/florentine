@@ -1,4 +1,5 @@
 from django.conf.urls import patterns, include, url
+
 from django.contrib import admin
 admin.autodiscover()
 
@@ -11,4 +12,7 @@ urlpatterns = patterns('',
 
     # Blog URLs
     url(r'', include('blogengine.urls')),
+
+    # Flat pages
+    url(r'', include('django.contrib.flatpages.urls')),
 )
