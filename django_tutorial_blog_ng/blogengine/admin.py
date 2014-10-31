@@ -9,6 +9,7 @@ class PostAdmin(admin.ModelAdmin):
     def save_model(self, request, obj, form, change):
         obj.author = request.user
         obj.save()
-        
+
 admin.site.register(models.Category)
+admin.site.register(models.Tag)
 admin.site.register(models.Post, PostAdmin)
